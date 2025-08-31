@@ -3,7 +3,6 @@
 This repository contains a simple guide on how to **install Docker**, run **basic Docker commands**, and **push images to AWS Elastic Container Registry (ECR)**.  
 Just follow the steps below 👇
 
----
 
 ## 📌 1. Install Docker on Amazon Linux / EC2
 ```bash
@@ -38,3 +37,14 @@ docker ps                      # List running containers
 docker ps -a                   # List all (stopped + running)
 docker stop <id>               # Stop a container
 docker rm <id>                 # Remove a container
+
+👍 You can take a running or stopped container and turn it into a new image using docker commit
+
+Step 1: Find your container ID or name
+
+docker ps -a
+
+
+🔹Step 2: Commit the container into a new image
+
+docker commit <container_id_or_name> <new_image_name>:<tag>
