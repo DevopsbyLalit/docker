@@ -48,3 +48,26 @@ docker ps -a
 🔹Step 2: Commit the container into a new image
 
 docker commit <container_id_or_name> <new_image_name>:<tag>
+
+🔹 Build File in image
+
+docker build -t <filename> .
+
+🔹 Run a image Container
+
+🔑 Fark ka summary:
+Two commands to run docker container
+
+Command	Kya karta hai
+
+1 => docker run -it <image>	Interactive mode me run karega, image ka default CMD chalega
+
+2 =>docker run -it --name <container_name> <image> /bin/bash	Container ko naam dega aur usme bash shell open karega
+
+⚡ Matlab:
+
+-it → interactive + terminal
+
+--name → custom naam assign karna
+
+/bin/bash → container ke andar bash shell kholna
